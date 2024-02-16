@@ -3,6 +3,7 @@ package com.yasar.entity;
 import java.util.Scanner;
 
 public class MallManager {
+    // Ana menüyü görüntüler ve kullanıcının farklı işlevler arasında gezinmesini sağlar.
     public void mainMenu() {
         int choice;
         do {
@@ -37,6 +38,7 @@ public class MallManager {
 
     }
 
+    // Yeni bir mağaza eklemenizi sağlar.
     public void addStore() {
         int storeChoice;
         do {
@@ -89,6 +91,7 @@ public class MallManager {
         } while (storeChoice != 0);
     }
 
+    // Mağaza listesini görüntüler.
     public void listStore() {
         System.out.println("""
                  **************************************
@@ -98,6 +101,7 @@ public class MallManager {
         Mall.storeList.forEach(System.out::println);
     }
 
+    // Mağaza bilgilerini güncellemenizi sağlar.
     public void updateStore() {
         int choiceProcess;
         do {
@@ -162,6 +166,7 @@ public class MallManager {
         } while (choiceProcess != 0);
     }
 
+    // Belirli bir mağaza hakkında detaylı bilgileri görüntüler.
     public void storeInfo() {
         System.out.println("""
                  **************************************
@@ -177,6 +182,7 @@ public class MallManager {
         System.out.println(Mall.storeList.get(choiceStore - 1).toString());
     }
 
+    // Seçilen bir mağazada çeşitli işlemleri gerçekleştirmenizi sağlar.
     public void storeProcess() {
         int choiceStore;
         do {
